@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="about">
+    
+    <!-- Navigation Menu -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/uitmlogo.png" alt="UiTM Logo" class="me-2" style="width: 60px; height: auto;">
+                UNIVERSITI TEKNOLOGI MARA
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="achievements.html">Achievements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                </ul>
+                <form class="d-flex ms-3" action="#" method="get">
+                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Us Section -->
+    <section class="container vh-100 d-flex align-items-center">
+        <div class="row align-items-center w-100">
+            <div class="col-md-6 text-center">
+                <img src="images/uitmscenary.jpg" alt="University Image" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-md-6">
+                <h1>About Universiti Teknologi Mara</h1>
+                <p class="lead mt-3">
+                    Universiti Teknologi Mara (UiTM) is committed to excellence in education, research, and innovation.
+                    Our mission is to empower students to achieve their full potential and contribute positively to society.
+                    UiTM provides a diverse and inclusive environment that nurtures creativity, critical thinking, and leadership.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision and Mission Section -->
+    <section class="container py-1">
+        <h2 class="text-center mb-4">VISION AND MISSION</h2>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">Vision</h3>
+                        <p class="card-text">
+                            To be a world-class institution that leads in providing high-quality education, research, and innovation, contributing to the socio-economic development of the nation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">Mission</h3>
+                        <p class="card-text">
+                            To empower and nurture students with knowledge, skills, and values through innovative teaching, research, and community engagement, to produce competent and responsible leaders for the future.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Charts Section -->
+    <section class="container py-3">
+        <h2 class="text-center mb-4">UiTM CHARTS</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-lg p-4">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-lg p-4">
+                    <canvas id="mixedChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // First Chart
+        const ctx1 = document.getElementById('myChart');
+        new Chart(ctx1, {
+            type: 'bar',
+            data: {
+                labels: ['KPPIM', 'KPPSK', 'KPPFA', 'KPPSS', 'KPPMC', 'KPPLS'],
+                datasets: [{
+                    label: 'LIST STUDENT BY FACULTY',
+                    data: [12, 17, 6, 8, 18, 15],
+                    borderWidth: 1,
+                    backgroundColor: ['#ff6384', '#36a2eb', '#ffce56', '#4bc0c0', '#9966ff', '#ff9f40'],
+                    borderColor: ['#ff6384', '#36a2eb', '#ffce56', '#4bc0c0', '#9966ff', '#ff9f40']
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Second Chart (Mixed Chart)
+        const ctx2 = document.getElementById('mixedChart');
+        new Chart(ctx2, {
+            data: {
+                datasets: [
+                    {
+                        type: 'bar',
+                        label: 'Dean List',
+                        data: [10, 20, 30, 40],
+                        backgroundColor: '#4bc0c0',
+                    },
+                    {
+                        type: 'line',
+                        label: 'Line Dataset',
+                        data: [50, 50, 50, 50],
+                        borderColor: '#ff6384',
+                        tension: 0.4,
+                    }
+                ],
+                labels: ['January', 'February', 'March', 'April']
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-center text-white py-3">
+        <div class="container">
+            <p>&copy; 2025 Universiti Teknologi MARA. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

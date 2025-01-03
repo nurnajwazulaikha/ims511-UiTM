@@ -1,0 +1,197 @@
+body {
+    scroll-behavior: smooth; 
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center; 
+}
+
+.logo-large {
+    width: 500px; 
+    height: auto;
+    display: block;
+    margin: 0 auto; 
+}
+
+#welcome .logo {
+    width: 500px; 
+    height: auto;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto 20px; 
+    width: 120px; 
+}
+
+a.btn {
+    font-size: 1.2rem; 
+    padding: 10px 20px; 
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.9); 
+    padding: 30px;
+    border-radius: 10px; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+}
+
+section {
+    padding: 80px 0; 
+}
+
+#home, #login, #welcome, #about, #profile, #achievements  {
+    background-image: url('images/loginbackground.jpg'); 
+}
+
+/* Card Image Styles */
+.card-img-top {
+    width: 100%; 
+    height: 500px; 
+    object-fit: cover; 
+}
+
+/* Card Styling */
+.card {
+    margin-bottom: 20px; 
+}
+
+.profile-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover; 
+}
+
+.large-image {
+    width: 50%;
+    height: 100%;
+    max-height: 400px; 
+    object-fit: cover;
+}
+
+.carousel-item img {
+    height: 500px; 
+    object-fit: cover; 
+    box-shadow: 0 4px 10px rgba(238, 255, 6, 0.2); 
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 80px;
+    border-radius: 10px; 
+}
+
+.carousel-caption h5 {
+    font-size: 2rem; 
+    font-weight: bold; 
+    color: #fff; 
+}
+
+.carousel-caption p {
+    font-size: 1.2rem; 
+    color: #fff; 
+}
+
+/* Vision and Mission Card Styling */
+.card {
+    border: none; 
+    border-radius: 10px; 
+    background-color: #f8f9fa; 
+}
+
+.card-body {
+    padding: 30px; 
+    text-align: center; 
+}
+
+.card-title {
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    color: #2b1fd7; 
+}
+
+.card-text {
+    font-size: 1.1rem; 
+    color: #ff0000; 
+}
+
+.card-body .card-text {
+    color: black !important; 
+}
+
+section.container.py-5 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#student-profile img {
+    max-width: 300px;  
+    max-height: 300px; 
+    object-fit: cover;
+    margin: 0 auto;    
+    display: block;
+}
+
+
+#skills, #contact {
+    background-color: yw; 
+}
+
+.student-info {
+    text-align: left;
+    padding: 20px;
+}
+
+.student-info h3 {
+    margin-bottom: 10px;
+}
+
+.student-info p {
+    margin-bottom: 5px;
+}
+
+.achievement-img {
+    width: 100%;  
+    height: 250px;  
+    object-fit: cover;  
+}
+
+body {
+    background-image: url('images/loginbackground.jpg'); 
+}
+
+img {
+    max-width: 100%; 
+    height: auto;
+}
+
+.navbar-brand img {
+    width: 40px; 
+    height: auto; 
+}
+
+.section-image img {
+    max-width: 80%; 
+    margin: 0 auto;
+    display: block; 
+}
+
+.card a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+.card-body .card-text {
+    color: blue; 
+    font-weight: normal; 
+}
+
+.pink-border {
+    border: 2px solid pink !important;
+}
+
+.pink-border:focus {
+    border-color: #ff66b2 !important;
+    box-shadow: 0 0 5px #ff66b2 !important;
+}
+
